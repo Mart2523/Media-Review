@@ -9,9 +9,10 @@ import java.lang.annotation.Documented;
 public class Book {
 
     @Id
+
+    private String ISBN;
     private String Title;
     private String Author;
-    private String ISBN;
     private String Genre;
 
 
