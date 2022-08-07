@@ -1,4 +1,4 @@
-package main.java.mediareviewapi.controllers;
+package mediareviewapi.controllers;
 
 public class UserController {
 }
