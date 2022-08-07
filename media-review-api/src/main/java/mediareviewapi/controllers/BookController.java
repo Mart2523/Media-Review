@@ -1,7 +1,7 @@
-package mediareviewapi.controllers;
+package main.java.mediareviewapi.controllers;
 
-import mediareviewapi.models.Book;
-import mediareviewapi.models.data.BookRepository;
+import main.java.mediareviewapi.models.Book;
+import main.java.mediareviewapi.models.data.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.Id;
 import org.springframework.http.ResponseEntity;
