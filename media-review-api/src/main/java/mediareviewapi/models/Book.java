@@ -49,9 +49,9 @@ public class Book {
     }
 
     public Book(String title, String author, String ISBN, String genre) {
-        Title = title;
-        Author = author;
+        this.Title = title;
+        this.Author = author;
         this.ISBN = ISBN;
-        Genre = genre;
+        this.Genre = genre;
     }
 }
