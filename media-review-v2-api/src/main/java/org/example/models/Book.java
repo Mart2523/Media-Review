@@ -10,7 +10,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
         @Id
         private String ID;
-
         private String ISBN;
         private String Title;
         private String Author;
