@@ -8,16 +8,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document("media")
     public class Book {
 
-        @Id
-        private String ID;
         private String ISBN;
         private String Title;
         private String Author;
         private String Genre;
 
-    public String getID() {
-        return ID;
-    }
 
     public String getTitle() {
             return Title;
@@ -51,11 +46,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
             Genre = genre;
         }
 
-    public Book(String ID, String ISBN, String title, String author, String genre) {
-        this.ID = ID;
+    public Book(String ISBN, String Title, String Author, String Genre) {
         this.ISBN = ISBN;
-        Title = title;
-        Author = author;
-        Genre = genre;
+        this.Title = Title;
+        this.Author = Author;
+        this.Genre = Genre;
     }
 }
