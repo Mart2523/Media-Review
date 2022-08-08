@@ -5,7 +5,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@Document
+@Document("media")
     public class Book {
 
         @Id
@@ -49,6 +49,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
         }
 
         public Book(String title, String author, String ISBN, String genre) {
+            super();
             this.Title = title;
             this.Author = author;
             this.ISBN = ISBN;
