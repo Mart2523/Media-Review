@@ -9,50 +9,50 @@ import java.util.Date;
 @Document("media")
     public class Book {
 
-        private String ISBN;
-        private String Title;
-        private String Author;
-        private String[] Genre;
-        private DocumentAudit DocumentAudit;
+        private String iSBN;
+        private String title;
+        private String author;
+        private String[] genre;
+        private DocumentAudit documentAudit;
 
 
     public String getTitle() {
-            return Title;
+            return title;
         }
 
         public void setTitle(String title) {
-            Title = title;
+            title = title;
         }
 
         public String getAuthor() {
-            return Author;
+            return author;
         }
 
         public void setAuthor(String author) {
-            Author = author;
+            author = author;
         }
 
         public String getISBN() {
-            return ISBN;
+            return iSBN;
         }
 
         public void setISBN(String ISBN) {
-            this.ISBN = ISBN;
+            this.iSBN = ISBN;
         }
 
     public String[] getGenre() {
-        return Genre;
+        return genre;
     }
 
     public void setGenre(String[] genre) {
-        Genre = genre;
+        genre = genre;
     }
 
-    public Book(String ISBN, String Title, String Author, String Genre[], DocumentAudit DocumentAudit) {
-        this.ISBN = ISBN;
-        this.Title = Title;
-        this.Author = Author;
-        this.Genre = Genre;
-        this.DocumentAudit = DocumentAudit;
+    public Book(String iSBN, String title, String author, String genre[], DocumentAudit documentAudit) {
+        this.iSBN = iSBN;
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.documentAudit = documentAudit;
     }
 }

@@ -20,8 +20,11 @@ public class DocumentAudit {
         return dateAdded;
     }
 
+    public DocumentAudit(){
+        this.dateAdded = java.time.LocalDate.now();
+    }
 
-    public DocumentAudit(String addedBy, LocalDate dateAdded) {
+    public DocumentAudit(String addedBy) {
         this.addedBy = addedBy;
         this.dateAdded = java.time.LocalDate.now();
     }
