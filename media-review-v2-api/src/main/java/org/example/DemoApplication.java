@@ -1,5 +1,6 @@
 package org.example;
 
+import com.mongodb.client.MongoClient;
 import org.example.models.Book;
 import org.example.models.Data.BookRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -14,7 +15,6 @@ public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
     }
-
     @Bean
     CommandLineRunner runner(BookRepository repository) {
         return args -> {
