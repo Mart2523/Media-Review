@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping
+@RequestMapping("/api")
 public class BookController {
     @Autowired
     private BookRepository bookRepository;
@@ -19,9 +19,9 @@ public class BookController {
         bookRepository.save(book);
         return "Added Book: " + book.getTitle();
     }
-    @GetMapping("view/{bookISBN}")
-    public Optional<Book> viewBook(@RequestBody Book book, String ISBN){
-        return bookRepository.findBookByISBN(book.getISBN());
+    @GetMapping("/viewBooks/{ISBN}")
+    public Optional<Book> viewBook(@PathVariable String ISBN){
+        return bookRepository.findBookByISBN(ISBN);
     }
     
 }
