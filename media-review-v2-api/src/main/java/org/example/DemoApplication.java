@@ -15,18 +15,4 @@ public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
     }
-    @Bean
-    CommandLineRunner runner(BookRepository repository) {
-        return args -> {
-            Book book = new Book(
-                    "1000100020",
-                    "123456",
-                    "FirstTest",
-                    "Test Author",
-                    "Horror"
-
-            );
-            repository.insert(book);
-        };
-    }
 }

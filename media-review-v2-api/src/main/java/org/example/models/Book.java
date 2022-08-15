@@ -54,8 +54,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
     public Book(String ID, String ISBN, String title, String author, String genre) {
         this.ID = ID;
         this.ISBN = ISBN;
-        Title = title;
-        Author = author;
-        Genre = genre;
+        this.Title = title;
+        this.Author = author;
+        this.Genre = genre;
     }
 }
