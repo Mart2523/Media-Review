@@ -21,7 +21,7 @@ public class BookController {
     }
 
     @GetMapping("/getBooks")
-    public List<Book> getBooks (@RequestBody Book book){
+    public List<Book> getBooks (){
         return bookRepository.findAll();
     }
 }

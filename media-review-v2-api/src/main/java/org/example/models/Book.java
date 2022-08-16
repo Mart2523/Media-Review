@@ -9,11 +9,13 @@ import java.util.Date;
 @Document("media")
     public class Book {
 
-        private String iSBN;
+        private String isbn;
         private String title;
         private String author;
-        private String[] genre;
+        private String[] genres;
         private DocumentAudit documentAudit;
+
+        private String mediaType;
 
 
     public String getTitle() {
@@ -33,26 +35,27 @@ import java.util.Date;
         }
 
         public String getISBN() {
-            return iSBN;
+            return isbn;
         }
 
         public void setISBN(String ISBN) {
-            this.iSBN = ISBN;
+            this.isbn = ISBN;
         }
 
-    public String[] getGenre() {
-        return genre;
+    public String[] getGenres() {
+        return genres;
     }
 
-    public void setGenre(String[] genre) {
-        genre = genre;
+    public void setGenres(String[] genres) {
+        genres = genres;
     }
 
-    public Book(String iSBN, String title, String author, String genre[], DocumentAudit documentAudit) {
-        this.iSBN = iSBN;
+    public Book(String isbn, String title, String author, String genres[], DocumentAudit documentAudit) {
+        this.isbn = isbn;
         this.title = title;
         this.author = author;
-        this.genre = genre;
+        this.genres = genres;
         this.documentAudit = documentAudit;
+        this.mediaType = "book";
     }
 }
