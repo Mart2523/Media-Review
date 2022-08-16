@@ -1,61 +1,61 @@
 package org.example.models;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.Date;
 
 @Data
 @Document("media")
     public class Book {
 
-        @Id
-        private String ID;
-        private String ISBN;
-        private String Title;
-        private String Author;
-        private String Genre;
+        private String isbn;
+        private String title;
+        private String author;
+        private String[] genres;
+        private DocumentAudit documentAudit;
 
-    public String getID() {
-        return ID;
-    }
+        private String mediaType;
+
 
     public String getTitle() {
-            return Title;
+            return title;
         }
 
         public void setTitle(String title) {
-            Title = title;
+            title = title;
         }
 
         public String getAuthor() {
-            return Author;
+            return author;
         }
 
         public void setAuthor(String author) {
-            Author = author;
+            author = author;
         }
 
         public String getISBN() {
-            return ISBN;
+            return isbn;
         }
 
         public void setISBN(String ISBN) {
-            this.ISBN = ISBN;
+            this.isbn = ISBN;
         }
 
-        public String getGenre() {
-            return Genre;
-        }
+    public String[] getGenres() {
+        return genres;
+    }
 
-        public void setGenre(String genre) {
-            Genre = genre;
-        }
+    public void setGenres(String[] genres) {
+        genres = genres;
+    }
 
-    public Book(String ID, String ISBN, String title, String author, String genre) {
-        this.ID = ID;
-        this.ISBN = ISBN;
-        this.Title = title;
-        this.Author = author;
-        this.Genre = genre;
+    public Book(String isbn, String title, String author, String genres[], DocumentAudit documentAudit) {
+        this.isbn = isbn;
+        this.title = title;
+        this.author = author;
+        this.genres = genres;
+        this.documentAudit = documentAudit;
+        this.mediaType = "book";
     }
 }
