@@ -10,11 +10,14 @@ import org.springframework.stereotype.Service;
 @Document("users")
 public class User {
 
+    @Id
+    private int id;
+
     private String firstname;
 
     private String lastname;
     @NotBlank
-    private String username;
+    private String email;
     @NotBlank
     private String password;
 
@@ -22,13 +25,18 @@ public class User {
 
     public User(){}
 
-    public User(String firstname, String lastname, @NotBlank String username,
+    public User(Integer id, String firstname, String lastname, @NotBlank String email,
                 @NotBlank String password) {
+        this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
-        this.username = username;
+        this.email = email;
         this.password = password;
 
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getFirstname() {
@@ -47,12 +55,12 @@ public class User {
         this.lastname = lastname;
     }
 
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -70,11 +78,11 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User that = (User) o;
-        return username == that.username;
+        return email == that.email;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(username);
+        return Objects.hash(email);
     }
 }
