@@ -10,9 +10,6 @@ import org.springframework.stereotype.Service;
 @Document("users")
 public class User {
 
-    @Id
-    private int id;
-
 
     private String firstname;
 
@@ -26,9 +23,9 @@ public class User {
 
     public User(){}
 
-    public User(Integer id, String firstname, String lastname, @NotBlank String email,
+    public User(String firstname, String lastname, @NotBlank String email,
                 @NotBlank String password) {
-        this.id = id;
+
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
@@ -36,9 +33,6 @@ public class User {
 
     }
 
-    public int getId() {
-        return id;
-    }
 
     public String getFirstname() {
         return firstname;
