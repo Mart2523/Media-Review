@@ -1,6 +1,7 @@
 package org.example.models;
 import javax.validation.constraints.NotBlank;
 import java.util.Objects;
+import java.util.UUID;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Document("users")
 public class User {
 
-
+    private String id = UUID.randomUUID().toString();
     private String firstname;
 
     private String lastname;
@@ -23,9 +24,9 @@ public class User {
 
     public User(){}
 
-    public User(String firstname, String lastname, @NotBlank String email,
+    public User(String id, String firstname, String lastname, @NotBlank String email,
                 @NotBlank String password) {
-
+        this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
@@ -33,6 +34,10 @@ public class User {
 
     }
 
+
+    public String getId() {
+        return id;
+    }
 
     public String getFirstname() {
         return firstname;
