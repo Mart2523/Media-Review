@@ -2,7 +2,6 @@ package org.example.controllers;
 
 
 
-import lombok.AllArgsConstructor;
 import org.example.models.Book;
 import org.example.models.data.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping
-@AllArgsConstructor
+
 public class BookController {
     @Autowired
     private BookRepository bookRepository;
@@ -24,14 +23,35 @@ public class BookController {
     }
 
     @GetMapping("/getBooks")
-    public List<Book> getBooks (){
+    public List<Book> getBooks() {
         return bookRepository.findAll();
     }
 
     @GetMapping("/getBook/{isbn}")
-    public Optional<Book> getBook(@PathVariable String isbn){
-        System.out.println(isbn);
-        return bookRepository.findBookByIsbn(isbn);
-    };
+    public Book getBook(@PathVariable String isbn) {
+        Optional<Book> bookData = bookRepository.findBookByIsbn(isbn);
+        return bookData.get();
+    }
 
+    ;
+
+
+    @PutMapping("/updateBook/{isbn}")
+    public Book addReview(@PathVariable String isbn, @RequestBody Book book) {
+        Optional<Book> bookData = bookRepository.findBookByIsbn(isbn);
+        Book book_ = bookData.get();
+
+        book_.setIsbn(book.getIsbn());
+        book_.setTitle(book.getTitle());
+        book_.setAuthor(book.getAuthor());
+        book_.setGenres(book.getGenres());
+        book_.setDocumentAudit(book.getDocumentAudit());
+        book_.setMediaType(book.getMediaType());
+        book_.setReviews(book.getReviews());
+
+ Book updatedBook = bookRepository.save(book_);
+ return updatedBook;
+
+
+    }
 }
