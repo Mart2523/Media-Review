@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Document("users")
 public class User {
 
-    private String id = UUID.randomUUID().toString();
+    private @Id String id = UUID.randomUUID().toString();
     private String firstname;
 
     private String lastname;
@@ -20,17 +20,19 @@ public class User {
     @NotBlank
     private String password;
 
+    private boolean loggedIn;
 
+    public User (){}
 
-    public User(){}
 
     public User(String id, String firstname, String lastname, @NotBlank String email,
-                @NotBlank String password) {
+                @NotBlank String password, boolean loggedIn) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
         this.password = password;
+        this.loggedIn = loggedIn;
 
     }
 
@@ -72,6 +74,13 @@ public class User {
     }
 
 
+    public boolean isLoggedIn() {
+        return loggedIn;
+    }
+
+    public void setLoggedIn(boolean loggedIn) {
+        this.loggedIn = loggedIn;
+    }
 
     @Override
     public boolean equals(Object o) {
