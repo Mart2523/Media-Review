@@ -28,17 +28,15 @@ public class BookController {
     }
 
     @GetMapping("/getBook/{isbn}")
-    public Book getBook(@PathVariable String isbn) {
-        Optional<Book> bookData = bookRepository.findBookByIsbn(isbn);
-        return bookData.get();
+    public Optional<Book> getBook(@PathVariable String isbn) {
+        return bookRepository.findBookByIsbn(isbn);
+
     }
 
-    ;
 
-
-    @PutMapping("/updateBook/{isbn}")
-    public Book addReview(@PathVariable String isbn, @RequestBody Book book) {
-        Optional<Book> bookData = bookRepository.findBookByIsbn(isbn);
+    @PutMapping("/getBook/{isbn}")
+    public Book updateBook(@PathVariable String isbn, @RequestBody Book book) {
+       Optional<Book> bookData = bookRepository.findBookByIsbn(isbn);
         Book book_ = bookData.get();
 
         book_.setIsbn(book.getIsbn());
@@ -49,8 +47,9 @@ public class BookController {
         book_.setMediaType(book.getMediaType());
         book_.setReviews(book.getReviews());
 
- Book updatedBook = bookRepository.save(book_);
- return updatedBook;
+
+ bookRepository.deleteByIsbn(isbn);
+ return bookRepository.save(book);
 
 
     }

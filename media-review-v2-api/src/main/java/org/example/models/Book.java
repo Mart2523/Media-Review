@@ -33,7 +33,7 @@ import java.util.Date;
         }
 
         public void setTitle(String title) {
-            title = title;
+            this.title = title;
         }
 
         public String getAuthor() {
@@ -41,7 +41,7 @@ import java.util.Date;
         }
 
         public void setAuthor(String author) {
-            author = author;
+            this.author = author;
         }
 
     public String getIsbn() {
@@ -57,7 +57,7 @@ import java.util.Date;
     }
 
     public void setGenres(String[] genres) {
-        genres = genres;
+        this.genres = genres;
     }
 
     public DocumentAudit getDocumentAudit() {
