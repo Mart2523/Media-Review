@@ -30,6 +30,7 @@ public class UserController {
         userRepository.save(newUser);
         return Status.SUCCESS;
     }
+
     @PostMapping("/users/login")
     public Status loginUser(@Valid @RequestBody User user) {
         List<User> users = userRepository.findAll();
@@ -44,6 +45,7 @@ public class UserController {
         userRepository.save(user);
         return Status.SUCCESS;
     }
+
     @PostMapping("/users/logout")
     public Status logUserOut(@Valid @RequestBody User user) {
         List<User> users = userRepository.findAll();
@@ -54,7 +56,7 @@ public class UserController {
                 return Status.SUCCESS;
             }
         }
-        return Status.FAILURE;
-    }
+            return Status.SUCCESS;
 
+    }
 }
