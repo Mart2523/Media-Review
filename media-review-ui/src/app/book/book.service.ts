@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {Book} from "./book";
+import {Observable} from "rxjs";
 
 
 
@@ -8,14 +10,15 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 })
 export class BookService {
 
-  private baseUrl = 'https://localhost:8080/getBooks'
+  private baseUrl = 'http://localhost:8080/getBooks'
 
   constructor(
     private http: HttpClient
   ) { }
 
-  getBooks(){
-    return this.http.get(this.baseUrl);
+  public getBooks(): Observable<Book[]>{
+    return this.http.get<Book[]>(this.baseUrl);
   }
+
 
 }
