@@ -1,6 +1,6 @@
 package org.example.controllers;
 
-import org.example.models.Data.UserRepository;
+import org.example.models.data.UserRepository;
 import org.example.models.Status;
 import org.example.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
