@@ -2,13 +2,14 @@ package org.example.controllers;
 
 import lombok.AllArgsConstructor;
 import org.example.models.Book;
-import org.example.models.Data.BookRepository;
+import org.example.models.data.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin("http://localhost:4200/")
 @RestController
 @RequestMapping
 @AllArgsConstructor
@@ -31,4 +32,5 @@ public class BookController {
         System.out.println(isbn);
         return bookRepository.findBookByIsbn(isbn);
     };
+
 }
