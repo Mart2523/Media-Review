@@ -10,15 +10,17 @@ import {Observable} from "rxjs";
 })
 export class BookService {
 
-  private baseUrl = 'http://localhost:8080/getBooks'
+  private baseUrl = 'http://localhost:8080'
 
   constructor(
     private http: HttpClient
   ) { }
 
   public getBooks(): Observable<Book[]>{
-    return this.http.get<Book[]>(this.baseUrl);
+    return this.http.get<Book[]>(`${this.baseUrl}/getBooks`);
   }
-
+  public addBook(book: Book): Observable<Book>{
+    return this.http.post<Book>(`${this.baseUrl}/addBook`, book);
+  }
 
 }
