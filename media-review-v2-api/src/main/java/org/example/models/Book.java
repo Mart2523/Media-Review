@@ -15,8 +15,18 @@ import java.util.Date;
         private String[] genres;
         private DocumentAudit documentAudit;
 
+        private Review[] reviews;
+
         private String mediaType;
 
+
+    public Review[] getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(Review[] reviews) {
+        this.reviews = reviews;
+    }
 
     public String getTitle() {
             return title;
@@ -34,13 +44,13 @@ import java.util.Date;
             this.author = author;
         }
 
-        public String getISBN() {
-            return isbn;
-        }
+    public String getIsbn() {
+        return isbn;
+    }
 
-        public void setISBN(String ISBN) {
-            this.isbn = ISBN;
-        }
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
 
     public String[] getGenres() {
         return genres;
@@ -50,12 +60,35 @@ import java.util.Date;
         this.genres = genres;
     }
 
-    public Book(String isbn, String title, String author, String genres[], DocumentAudit documentAudit) {
+    public DocumentAudit getDocumentAudit() {
+        return documentAudit;
+    }
+
+    public void setDocumentAudit(DocumentAudit documentAudit) {
+        this.documentAudit = documentAudit;
+    }
+
+    public String getMediaType() {
+        return mediaType;
+    }
+
+    public void setMediaType(String mediaType) {
+        this.mediaType = mediaType;
+    }
+
+
+
+
+
+
+
+    public Book(String isbn, String title, String author, String genres[], DocumentAudit documentAudit, Review[] reviews) {
         this.isbn = isbn;
         this.title = title;
         this.author = author;
         this.genres = genres;
         this.documentAudit = documentAudit;
         this.mediaType = "book";
+        this.reviews = reviews;
     }
 }
