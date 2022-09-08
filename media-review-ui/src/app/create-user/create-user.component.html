@@ -1,0 +1,32 @@
+<h3> Sign Up</h3>
+<main>
+  <form (ngSubmit)="onSubmit()">
+    <div class = "form-group">
+      <label>First Name</label>
+      <input type="text" class="form-control" id = "firstName"
+             [(ngModel)]="user.firstName" name = "firstName">
+    </div>
+
+    <div class = "form-group">
+      <label>Last name</label>
+      <input type="text" class="form-control" id = "lastName"
+             [(ngModel)]="user.lastName" name = "lastName">
+    </div>
+
+    <div class = "form-group">
+      <label>Email</label>
+      <input type="text" class="form-control" id = "email"
+             [(ngModel)]="user.email" name = "email">
+    </div>
+
+    <div class = "form-group">
+      <label>Password</label>
+      <input type="text" class="form-control" id = "password"
+             [(ngModel)]="user.password" name = "password">
+    </div>
+
+    <button class="btn btn-success" type="submit"> Submit
+    </button>
+
+  </form>
+</main>

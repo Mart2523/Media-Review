@@ -1,55 +1,21 @@
-<!DOCTYPE html>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark" style="color: blue">
+  <ul class = "navbar-nav">
+    <li class = "nav-item">
+      <a routerLink="/books" routerLinkActive="active" class="nav-link"> Book List</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/create-book" routerLinkActive="active" class="nav-link"> Add Book</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/create-user" routerLinkActive="active" class="nav-link"> Sign Up</a>
+    </li>
+  </ul>
 
-<html>
-
-  <head>
-    <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title></title>
-
-  </head>
-
-  <body>
-    <h1>Hello, World!</h1>
-
-
-    <form class="book-example-form" [formGroup]="form" (ngSubmit)="onSubmit($event)">
-      <p>
-        <mat-form-field class="book-example-full-width" appearance="fill">
-          <mat-label>Book Title</mat-label>
-          <input matInput id="bookTitle" placeholder="">
-        </mat-form-field>
-        </p>
- 
-      <p>
-        <mat-form-field class="book-example-full-width" appearance="fill">
-          <mat-label>Author's Name</mat-label>
-          <input id="authorName" formControlName="authorName" matInput>
-        </mat-form-field>
-        </p>
- 
-
-      <p>
-        <mat-form-field class="book-example-full-width" appearance="fill">
-          <mat-label>ISBN</mat-label>
-          <mat-error class="Error">Make sure your ISBN is valid!</mat-error>
-          <input matInput id="isbn" formControlName="isbn">
-        </mat-form-field>
-        <mat-form-field class="book-example-full-width" appearance="fill">
-          <mat-label>Genres</mat-label>
-          <mat-error class="Error">Invalid Genre!</mat-error>
-          <input matInput id="genres" class="lowercase" formControlName="genres" lower>
-        </mat-form-field>
-      </p>
-
-      <div class="book-example-button-row">
-      <button mat-flat-button color="primary">Submit</button>
-    </div>
-
-    </form>
-  </body>
-</html>
+</nav>
 
 
+<h1 class="text-center" >Media Review</h1>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
 

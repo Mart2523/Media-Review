@@ -4,6 +4,7 @@ import org.example.models.data.UserRepository;
 import org.example.models.Status;
 import org.example.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 import java.util.List;
 
+@CrossOrigin("http://localhost:4200/")
 @RestController
 public class UserController {
     @Autowired
