@@ -5,7 +5,7 @@ export class Book {
   author: string;
   title: string;
   genreForm =  new FormControl('');
-  genres: string[] = ["Horror", "Romance", "SyFy", ""];
+  genres: string[] = ["Horror", "Romance", "SyFy"];
 
   constructor(isbn: string, author: string, title: string) {
     this.isbn = isbn;
