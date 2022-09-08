@@ -10,9 +10,7 @@ public class DocumentAudit {
     private String addedBy;
     private Date date = new Date();
 
-//    private DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
-//
-//    private LocalDateTime dateAdded;
+
     private String dateAdded = String.valueOf(date);
 
     public String getAddedBy() {
