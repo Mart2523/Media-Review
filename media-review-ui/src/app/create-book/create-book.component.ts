@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Book} from "../book/book";
 import {BookService} from "../book/book.service";
 import {Router} from "@angular/router";
+import {FormControl} from "@angular/forms";
 
 
 @Component({
@@ -16,6 +17,7 @@ export class CreateBookComponent implements OnInit {
 
  book: Book = new Book("", "", "");
   genreForm: any;
+
 
   constructor(private bookService: BookService, private router: Router) { }
 

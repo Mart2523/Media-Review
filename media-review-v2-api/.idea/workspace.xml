@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3fe424a-46d1-4bf9-ba35-26d02fe74afe" name="Changes" comment="Changed Data to &quot;data&quot;">
-      <change beforePath="$PROJECT_DIR$/../media-review-ui/src/app/book/book.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../media-review-ui/src/app/book/book.ts" afterDir="false" />
+    <list default="true" id="e3fe424a-46d1-4bf9-ba35-26d02fe74afe" name="Changes" comment="added Cross origin">
+      <change beforePath="$PROJECT_DIR$/../media-review-ui/src/app/create-book/create-book.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../media-review-ui/src/app/create-book/create-book.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/models/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/models/Status.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +126,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662082358357</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="merged from main">
+      <created>1662681482938</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1662681482938</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added Cross origin">
+      <created>1662681582288</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1662681582288</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,7 +159,9 @@
     <MESSAGE value="Added rating and review" />
     <MESSAGE value="Added login to User Controller" />
     <MESSAGE value="Changed Data to &quot;data&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed Data to &quot;data&quot;" />
+    <MESSAGE value="merged from main" />
+    <MESSAGE value="added Cross origin" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Cross origin" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/media_review_v2_api$DemoApplication.ic" NAME="DemoApplication Coverage Results" MODIFIED="1661813647984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
