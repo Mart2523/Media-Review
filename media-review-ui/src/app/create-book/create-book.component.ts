@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Component, OnInit } from '@angular/core';
 import {Book} from "../book/book";
 import {BookService} from "../book/book.service";
@@ -15,17 +16,20 @@ export class CreateBookComponent implements OnInit {
 
 
 
- book: Book = new Book("", "", "");
+ book: Book = new Book("", "", "", [],);
   genreForm: any;
 
 
+
   constructor(private bookService: BookService, private router: Router) { }
+
+
 
   ngOnInit(): void {
   }
 
   saveBook(){
-    this.bookService.addBook(this.book).subscribe( data=>{
+    this.bookService.addBook(this.book).subscribe( (data: any)=>{
       console.log(data);
       this.getToBookList();
     })

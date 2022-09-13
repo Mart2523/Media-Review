@@ -28,7 +28,7 @@
         (+{{(book.genres.values?.length || 0) - 1}} {{book.genres.values?.length === 2 ? 'other' : 'others'}})
       </span>
       </mat-select-trigger>
-      <mat-option *ngFor="let genre of book.genres" [value]="genre">{{genre}}</mat-option>
+      <mat-option *ngFor="let genre of book.genreOptions" [value]="genre">{{genre}}</mat-option>
     </mat-select>
   </mat-form-field>
 
