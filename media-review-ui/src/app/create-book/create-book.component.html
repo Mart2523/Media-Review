@@ -1,5 +1,6 @@
-<h3> Add Book </h3>
-<main>
+<div style="padding-bottom: 30px">
+<h3 style="background-color: lightgrey"> Add Book </h3>
+<main style="background-color: lightgrey">
 <form (ngSubmit)="onSubmit()">
   <div class = "form-group">
     <label>Book Title</label>
@@ -21,7 +22,7 @@
 
  <form [formGroup]="genreForm">
 
-Genres : <div *ngFor="let genre of genreList; let i=index">
+Genres : <div *ngFor="let genre of genreList; let i=index" class="dropdown-check-list">
 
    <label>
 
