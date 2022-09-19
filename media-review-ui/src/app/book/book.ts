@@ -1,8 +1,19 @@
-export interface Book {
+import {FormControl} from "@angular/forms";
+
+export class Book {
   isbn: string;
   author: string;
   title: string;
-  genres: string[];
-  documentAudit: object;
-  mediaType: string;
+
+
+  genres: string[] = []
+
+
+
+  constructor(isbn: string, author: string, title: string) {
+    this.isbn = isbn;
+    this.author = author;
+    this.title = title;
+
+  }
 }

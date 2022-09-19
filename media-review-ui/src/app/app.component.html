@@ -1,3 +1,22 @@
-<app-header></app-header>
 
-<app-book></app-book>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark" style="background-color: black">
+  <ul class = "navbar-nav" style="color: black">
+    <li class = "nav-item">
+      <a routerLink="/books" routerLinkActive="active" class="nav-link"> Book List</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/create-book" routerLinkActive="active" class="nav-link"> Add Book</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/create-user" routerLinkActive="active" class="nav-link"> Sign Up</a>
+    </li>
+  </ul>
+
+</nav>
+
+
+<h1 class="text-center" style="background-color: brown; color: white" >Media Review</h1>
+<div class="container" style="background-color: lightgrey">
+  <router-outlet></router-outlet>
+</div>
+
