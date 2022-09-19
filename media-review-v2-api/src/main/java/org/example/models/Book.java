@@ -13,7 +13,7 @@ import java.util.Date;
         private String title;
         private String author;
         private String[] genres;
-        private DocumentAudit documentAudit;
+        private org.example.models.DocumentAudit documentAudit;
 
         private Review[] reviews;
 
