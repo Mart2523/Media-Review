@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Component, OnInit } from '@angular/core';
 import {Book} from "../book/book";
 import {BookService} from "../book/book.service";
@@ -15,7 +16,7 @@ export class CreateBookComponent implements OnInit {
 
 
 
- book: Book = new Book("", "", "");
+  book: Book = new Book("", "", "");
   genreForm: any;
   form: FormGroup;
   genreList: string[] = [
@@ -36,7 +37,7 @@ export class CreateBookComponent implements OnInit {
 
   constructor(private bookService: BookService, private router: Router, private fb: FormBuilder) {
     this.form = this.fb.group({
-    checkArray: this.fb.array([])})
+      checkArray: this.fb.array([])})
   }
 
   ngOnInit(): void {
