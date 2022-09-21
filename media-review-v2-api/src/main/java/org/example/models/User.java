@@ -6,14 +6,13 @@ import java.util.UUID;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 @Document("users")
 public class User {
 
-    private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+  
 
     private @Id String id = UUID.randomUUID().toString();
     private String firstname;
@@ -22,7 +21,7 @@ public class User {
     @NotNull
     private String email;
     @NotNull
-    private String pwHash;
+    private String password;
 
     private boolean loggedIn;
 
@@ -35,7 +34,7 @@ public class User {
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
-        this.pwHash= encoder.encode(password);
+        this.password = password;
         this.loggedIn = loggedIn;
 
     }
@@ -49,8 +48,8 @@ public class User {
         return firstname;
     }
 
-    public String getPwHash() {
-        return pwHash;
+    public String getPassword() {
+        return password;
     }
 
     public void setFirstname(String firstname) {
