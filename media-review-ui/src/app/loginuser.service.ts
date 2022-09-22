@@ -8,6 +8,8 @@ import {Observable} from "rxjs";
 })
 export class LoginuserService {
 
+  loggedIn: boolean = false;
+
 private baseUrl = "http://localhost:8080/users/login"
   constructor(private httpClient: HttpClient) { }
 

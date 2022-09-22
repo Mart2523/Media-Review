@@ -10,6 +10,12 @@ import {
   ControlContainer,
   FormArray
 } from '@angular/forms';
+import {AuthserviceService} from "./authservice.service";
+import {CookieService} from "ngx-cookie-service";
+import {User} from "./create-user/user";
+import {Router} from "@angular/router";
+import {LoginuserService} from "./loginuser.service";
+import {UserLoginComponent} from "./user-login/user-login.component";
 
 
 
@@ -22,20 +28,33 @@ export class AppComponent implements OnInit {
 
 form!: FormGroup; // TS 2.7 workaround
 formSubmitted = false;
+Obj: User = new User("","","","")
 
-constructor(private fb: FormBuilder) {
+constructor(private loginServ: LoginuserService, private router: Router, private fb: FormBuilder, private srvLogin: AuthserviceService, private cookieService: CookieService) {
+
+
   this.form = this.fb.group({
     checkArray: this.fb.array([]),
+
+
   })
 }
 
 onCheckboxChange(e:any){
   const checkArray: FormArray = this.form.get('checkArray') as FormArray;
 }
-
+loggedIn = this.loginServ.loggedIn;
 
   ngOnInit(): void {
   }
+
+logout():void {
+  this.router.navigate(['/login'])
+  this.cookieService.deleteAll();
+  this.loggedIn = false;
+
+
+}
 
 }
 

@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3fe424a-46d1-4bf9-ba35-26d02fe74afe" name="Changes" comment="Updated User login" />
+    <list default="true" id="e3fe424a-46d1-4bf9-ba35-26d02fe74afe" name="Changes" comment="Updated User login">
+      <change beforePath="$PROJECT_DIR$/../media-review-ui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../media-review-ui/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media-review-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../media-review-ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media-review-ui/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../media-review-ui/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media-review-ui/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../media-review-ui/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media-review-ui/src/app/create-user/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../media-review-ui/src/app/create-user/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media-review-ui/src/app/user-login/user-login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../media-review-ui/src/app/user-login/user-login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,6 +103,7 @@
       <updated>1661716858470</updated>
       <workItem from="1663622420501" duration="581000" />
       <workItem from="1663627316309" duration="949000" />
+      <workItem from="1663880435058" duration="2601000" />
     </task>
     <task id="LOCAL-00001" summary="Added register and login function">
       <created>1661727504580</created>

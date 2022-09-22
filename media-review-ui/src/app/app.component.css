@@ -4,12 +4,21 @@
   width: 100%;
 }
 
+.logoutButton{
+  position:fixed;
+  right:30px;
+  top:12px;
+  font-size: 17px;
+  color: white;
+}
+
+
 .book-example-full-width{
   width: 100%;
 }
 
 .nav-link{
-  color: black;
+  color: white;
 }
 
 *{
