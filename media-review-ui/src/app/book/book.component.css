@@ -1,0 +1,17 @@
+.mysearchdiv {
+  float: right;
+  height: 50px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.card {
+  margin-bottom: 10px;
+  margin-left: 210px;
+}
+.table {
+  width: 800px;
+  height: 100px;
+}
