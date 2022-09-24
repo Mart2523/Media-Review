@@ -4,6 +4,7 @@ import {Book} from "../book/book";
 import {BookService} from "../book/book.service";
 import {Router} from "@angular/router";
 import {FormArray, FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {CookieService} from "ngx-cookie-service";
 
 
 @Component({
@@ -18,7 +19,7 @@ export class CreateBookComponent implements OnInit {
 
   book: Book = new Book("", "", "");
   genreForm: any;
-  form: FormGroup;
+  form: FormGroup = new FormGroup('',)
   genreList: string[] = [
     "Mystery",
     "Thriller",
@@ -35,7 +36,10 @@ export class CreateBookComponent implements OnInit {
 
 
 
-  constructor(private bookService: BookService, private router: Router, private fb: FormBuilder) {
+
+
+
+  constructor(private bookService: BookService, private router: Router, private fb: FormBuilder, private cookies: CookieService) {
     this.form = this.fb.group({
       checkArray: this.fb.array([])})
   }
@@ -61,6 +65,7 @@ export class CreateBookComponent implements OnInit {
   }
 
   saveBook(){
+    this.book.addedBy = this.cookies.get("email")
     this.bookService.addBook(this.book).subscribe( data=>{
       console.log(data);
       this.getToBookList();

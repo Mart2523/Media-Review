@@ -30,7 +30,7 @@ form!: FormGroup; // TS 2.7 workaround
 formSubmitted = false;
 Obj: User = new User("","","","")
 
-constructor(private loginServ: LoginuserService, private router: Router, private fb: FormBuilder, private srvLogin: AuthserviceService, private cookieService: CookieService) {
+constructor(private loginserv: LoginuserService, private router: Router, private fb: FormBuilder, private srvLogin: AuthserviceService, private cookieService: CookieService) {
 
 
   this.form = this.fb.group({
@@ -43,15 +43,18 @@ constructor(private loginServ: LoginuserService, private router: Router, private
 onCheckboxChange(e:any){
   const checkArray: FormArray = this.form.get('checkArray') as FormArray;
 }
-loggedIn = this.loginServ.loggedIn;
+
 
   ngOnInit(): void {
   }
 
+  loggedIn = this.loginserv.loggedIn
+
 logout():void {
+  this.loggedIn = false;
   this.router.navigate(['/login'])
   this.cookieService.deleteAll();
-  this.loggedIn = false;
+
 
 
 }

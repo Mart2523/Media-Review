@@ -19,10 +19,9 @@ export class UserLoginComponent implements OnInit {
   }
   loggedIn = this.loginuserservice.loggedIn
   userLogin(){
+    this.loggedIn = true
     this.loginuserservice.loginUser(this.user).subscribe(data=>{
       this.cookieService.set('email', this.user.email)
-      this.cookieService.set("password", this.user.password)
-      this.loggedIn = true
       alert("Login Successful");
       this.getToBookList()
     }, error => alert("Please enter correct credentials"))

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Book} from "./book";
 import {Observable} from "rxjs";
+import {CookieService} from "ngx-cookie-service";
 
 
 
@@ -14,7 +15,7 @@ export class BookService {
   private baseUrl = 'http://localhost:8080'
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient, private cookies: CookieService
   ) { }
 
   public getBooks(): Observable<Book[]>{

@@ -8,6 +8,7 @@
           <th>Title</th>
           <th>Author</th>
           <th>Genres</th>
+          <th>Added By</th>
         </thead>
         <tbody>
           <tr *ngFor = "let book of books | filter: searchWord">
@@ -15,6 +16,7 @@
             <td> {{book.title}}</td>
             <td> {{book.author}}</td>
             <td> {{book.genres}}</td>
+            <td> {{book.addedBy}}</td>
           </tr>
         </tbody>
       </table>
