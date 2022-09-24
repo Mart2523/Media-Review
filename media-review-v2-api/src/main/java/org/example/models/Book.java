@@ -19,6 +19,8 @@ import java.util.Date;
 
         private String mediaType;
 
+        private String addedBy;
+
 
     public Review[] getReviews() {
         return reviews;
@@ -77,16 +79,20 @@ import java.util.Date;
     }
 
 
+    public String getAddedBy() {
+        return addedBy;
+    }
 
+    public void setAddedBy(String addedBy) {
+        this.addedBy = addedBy;
+    }
 
-
-
-
-    public Book(String isbn, String title, String author, String genres[], DocumentAudit documentAudit, Review[] reviews) {
+    public Book(String isbn, String title, String author, String genres[], String addedBy, DocumentAudit documentAudit, Review[] reviews) {
         this.isbn = isbn;
         this.title = title;
         this.author = author;
         this.genres = genres;
+        this.addedBy = addedBy;
         this.documentAudit = documentAudit;
         this.mediaType = "book";
         this.reviews = reviews;
