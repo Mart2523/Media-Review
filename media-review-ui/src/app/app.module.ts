@@ -11,13 +11,16 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import { CreateUserComponent } from './create-user/create-user.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import {Ng2SearchPipeModule} from "ng2-search-filter";
 
 @NgModule({
   declarations: [
     AppComponent,
     BookComponent,
     CreateBookComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   exports: [CreateBookComponent, BookComponent, AppRoutingModule],

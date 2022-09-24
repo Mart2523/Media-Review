@@ -4,6 +4,7 @@ export class Book {
   isbn: string;
   author: string;
   title: string;
+  addedBy: string = ""
 
 
   genres: string[] = []

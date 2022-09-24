@@ -10,6 +10,7 @@ import {Book} from "./book";
 export class BookComponent implements OnInit {
 
   books: Book[] = [];
+  searchWord: any;
 
   constructor(private bookService: BookService) { }
 

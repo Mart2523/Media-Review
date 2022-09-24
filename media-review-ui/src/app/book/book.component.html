@@ -1,19 +1,22 @@
 <div class = "container">
   <div class = "card">
     <div class = "card-body">
+      <input type="text" class="form-control" placeholder="Please enter search term" [(ngModel)]="searchWord">
       <table class = "table table-stripped">
         <thead>
           <th>ISBN</th>
           <th>Title</th>
           <th>Author</th>
           <th>Genres</th>
+          <th>Added By</th>
         </thead>
         <tbody>
-          <tr *ngFor = "let book of books">
+          <tr *ngFor = "let book of books | filter: searchWord">
             <td> {{book.isbn}}</td>
             <td> {{book.title}}</td>
             <td> {{book.author}}</td>
             <td> {{book.genres}}</td>
+            <td> {{book.addedBy}}</td>
           </tr>
         </tbody>
       </table>

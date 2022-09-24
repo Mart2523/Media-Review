@@ -21,7 +21,7 @@
                [(ngModel)]="book.isbn" name = "isbn">
       </div>
 
-      <form [formGroup]="genreForm">
+      <form *ngIf="genreList" [formGroup]="genreForm">
 
         Genres : <div *ngFor="let genre of genreList; let i=index" class="dropdown-check-list">
 

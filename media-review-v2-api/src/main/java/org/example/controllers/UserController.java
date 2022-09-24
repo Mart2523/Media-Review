@@ -4,6 +4,7 @@ import org.example.models.data.UserRepository;
 import org.example.models.Status;
 import org.example.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -34,19 +35,14 @@ public class UserController {
     }
 
     @PostMapping("/users/login")
-    public Status loginUser(@Valid @RequestBody User user) {
-        List<User> users = userRepository.findAll();
-        for (User other : users) {
-            if (other.equals(user)) {
-                user.setLoggedIn(true);
-                userRepository.save(user);
-                return Status.SUCCESS;
-            }
-        }
-        user.setLoggedIn(true);
-        userRepository.save(user);
-        return Status.SUCCESS;
+    public ResponseEntity<?> loginUser(@Valid @RequestBody User userData) {
+        User user=userRepository.findByEmail(userData.getEmail());
+        if(user.getPassword().equals(userData.getPassword()))
+            return ResponseEntity.ok(user);
+
+        return (ResponseEntity<?>) ResponseEntity.internalServerError();
     }
+
 
     @PostMapping("/users/logout")
     public Status logUserOut(@Valid @RequestBody User user) {
