@@ -15,6 +15,5 @@ export class Book {
     this.isbn = isbn;
     this.author = author;
     this.title = title;
-
   }
 }

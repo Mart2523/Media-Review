@@ -19,6 +19,9 @@ export class BookComponent implements OnInit {
       this.books = data;
     });
 
+
+    }
+
   }
 
-}
+
