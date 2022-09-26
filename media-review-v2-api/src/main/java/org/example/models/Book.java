@@ -96,7 +96,7 @@ import java.util.Date;
         this.title = title;
         this.author = author;
         this.genres = genres;
-        this.addedBy = addedBy
+        this.addedBy = addedBy;
         this.documentAudit = documentAudit;
         this.mediaType = "book";
         this.reviews = reviews;
