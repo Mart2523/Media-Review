@@ -6,7 +6,6 @@ import {Observable} from "rxjs";
 import {CookieService} from "ngx-cookie-service";
 
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -24,5 +23,9 @@ export class BookService {
   public addBook(book: Book): Observable<Object>{
     return this.http.post<Book>(`${this.baseUrl}/addBook`, book);
   }
+  public getBook(isbn: string | null) : Observable<any>{
+    return this.http.get<any>(`${this.baseUrl}/getBook/` + isbn);
+  }
+
 
 }

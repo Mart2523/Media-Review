@@ -13,6 +13,7 @@ import {MatSelectModule} from "@angular/material/select";
 import { CreateUserComponent } from './create-user/create-user.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import {Ng2SearchPipeModule} from "ng2-search-filter";
+import { ViewBookComponent } from './view-book/view-book.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {Ng2SearchPipeModule} from "ng2-search-filter";
     BookComponent,
     CreateBookComponent,
     CreateUserComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    ViewBookComponent
   ],
   imports: [
     BrowserModule,
