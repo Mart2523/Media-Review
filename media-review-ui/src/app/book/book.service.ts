@@ -23,8 +23,9 @@ export class BookService {
   public addBook(book: Book): Observable<Object>{
     return this.http.post<Book>(`${this.baseUrl}/addBook`, book);
   }
-  public getBook(isbn: string) : Observable<Book>{
-    return this.http.get<Book>(`${this.baseUrl}/getBook/` + isbn);
+  public getBook(isbn: string | null) : Observable<any>{
+    return this.http.get<any>(`${this.baseUrl}/getBook/` + isbn);
   }
+
 
 }

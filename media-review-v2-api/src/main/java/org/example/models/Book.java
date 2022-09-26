@@ -13,12 +13,21 @@ import java.util.Date;
         private String title;
         private String author;
         private String[] genres;
+
+        private String addedBy;
         private org.example.models.DocumentAudit documentAudit;
 
         private Review[] reviews;
 
         private String mediaType;
 
+    public String getAddedBy() {
+        return addedBy;
+    }
+
+    public void setAddedBy(String addedBy) {
+        this.addedBy = addedBy;
+    }
 
     public Review[] getReviews() {
         return reviews;
@@ -82,11 +91,12 @@ import java.util.Date;
 
 
 
-    public Book(String isbn, String title, String author, String genres[], DocumentAudit documentAudit, Review[] reviews) {
+    public Book(String isbn, String title, String author, String genres[], String addedBy, DocumentAudit documentAudit, Review[] reviews) {
         this.isbn = isbn;
         this.title = title;
         this.author = author;
         this.genres = genres;
+        this.addedBy = addedBy
         this.documentAudit = documentAudit;
         this.mediaType = "book";
         this.reviews = reviews;

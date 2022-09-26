@@ -13,7 +13,8 @@ const routes: Routes =
     {path: 'create-user', component: CreateUserComponent},
     {path: 'login', component: UserLoginComponent},
     {path: '', redirectTo: 'books', pathMatch: 'full'},
-    {path: 'view-book', component: ViewBookComponent}
+    {path: 'view-book', component: ViewBookComponent},
+    {path: 'view-book/:isbn', component: ViewBookComponent}
   ];
 
 @NgModule({

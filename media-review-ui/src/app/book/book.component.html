@@ -18,7 +18,7 @@
             <td> {{book.genres}}</td>
             <td> {{book.addedBy}}</td>
             <td>
-              <a routerLink="/view-book" routerLinkActive="active" class="nav-link"> View</a>
+              <a routerLink="/view-book" (click)="goToViewBook(book.isbn)" routerLinkActive="active" class="nav-link"> View</a>
             </td>
           </tr>
         </tbody>

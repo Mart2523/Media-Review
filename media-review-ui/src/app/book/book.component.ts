@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {BookService} from "./book.service";
 import {Book} from "./book";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -13,7 +14,7 @@ export class BookComponent implements OnInit {
   books: Book[] = [];
   searchWord: any;
 
-  constructor(private bookService: BookService) { }
+  constructor(private bookService: BookService, private router: Router) { }
 
 
   ngOnInit(): void {
@@ -22,6 +23,10 @@ export class BookComponent implements OnInit {
     });
 
 
+  }
+
+  goToViewBook(isbn: String) {
+    this.router.navigate(["/view-book", isbn])
 
   }
 
