@@ -8,6 +8,7 @@
         <th>Author</th>
         <th>Genres</th>
         <th>Added By</th>
+        <th>Reviews</th>
         </thead>
         <tbody>
         <tr>
@@ -16,9 +17,19 @@
           <td> {{book.author}}</td>
           <td> {{book.genres}}</td>
           <td> {{book.addedBy}}</td>
+           <td>{{book.reviews}}</td>
+
+
         </tr>
         </tbody>
       </table>
+
+      <div>
+        <form (ngSubmit)="addReview()">
+          <input type="text" [(ngModel)]="txtName">
+          <button type="submit" >Add Review</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>

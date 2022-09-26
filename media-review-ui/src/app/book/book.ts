@@ -8,6 +8,7 @@ export class Book {
 
 
   genres: string[] = []
+  reviews: string[] = []
 
 
 
