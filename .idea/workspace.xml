@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aab66996-82f8-4a31-94a6-fc4695f7c541" name="Changes" comment="new branch for search for book backend">
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="aab66996-82f8-4a31-94a6-fc4695f7c541" name="Changes" comment="new branch for search for book backend" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
